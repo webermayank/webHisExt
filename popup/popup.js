@@ -2,6 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const somewhereElement = document.querySelector(".horizontal-list");
   const deleteHis = document.querySelector(".first-click");
 
+  // Function to safely escape HTML
+  function escapeHtml(unsafe) {
+    return unsafe
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
   // Function to calculate "time ago"
   function timeAgo(date) {
     const seconds = Math.floor((new Date() - new Date(date)) / 1000);
@@ -43,13 +53,15 @@ document.addEventListener("DOMContentLoaded", () => {
             <li class="list-item">
                 <div class="card custom-card">
                     <div class="card-body">
-                        <h5 class="card-title">${entry.query || entry.url}</h5>
-                        <p class="card-text">Visited: ${timeAgo(
-                          entry.visitedAt
+                        <h5 class="card-title">${escapeHtml(
+                          entry.query || entry.url
+                        )}</h5>
+                        <p class="card-text">Visited: ${escapeHtml(
+                          timeAgo(entry.visitedAt)
                         )}</p>
-                        <a href="${
+                        <a href="${escapeHtml(
                           entry.url
-                        }" target="_blank" class="btn btn-primary">Visit</a>
+                        )}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit</a>
                     </div>
                 </div>
             </li>
