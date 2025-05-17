@@ -5,15 +5,19 @@ import { DatabaseResponse, MessageRequest, UrlEntry } from "./types";
 const dbService = new DatabaseService();
 
 // Handle tab updates
-chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
-  if (changeInfo.status === "complete") {
-    chrome.tabs.get(tabId, (tab) => {
+chrome.tabs.onUpdated.addListener(
+  (
+    tabId: number,
+    changeInfo: chrome.tabs.TabChangeInfo,
+    tab: chrome.tabs.Tab
+  ) => {
+    if (changeInfo.status === "complete") {
       if (tab.url) {
         dbService.storeUrl(tabId, tab.url);
       }
-    });
+    }
   }
-});
+);
 
 // Handle tab removal
 chrome.tabs.onRemoved.addListener((tabId) => {
