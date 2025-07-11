@@ -27,11 +27,11 @@ Chrome Extension: Enhanced URL History & Search Query Extraction is a lightweigh
 - User-Friendly Interface: Clean and interactive UI built using Bootstrap.
 ## 🖼️Screenshots
 #### Image below showing the UI of the extension
-![image](https://github.com/user-attachments/assets/b1e5c690-b01c-4e53-b7e3-09bea0836c69)
+<img width="583" height="426" alt="Screenshot 2025-07-11 235502" src="https://github.com/user-attachments/assets/255d611e-5c93-4bfd-801e-2315e1156d79" />
 
 
 #### Image below shows how it looks after clearing the history
-![image](https://github.com/user-attachments/assets/cff05b7c-81dd-400d-9b5e-2cfa0236d513)
+<img width="543" height="361" alt="Screenshot 2025-07-11 235536" src="https://github.com/user-attachments/assets/3fe3d9a7-a01f-4814-96b7-8736c3214b51" />
 
 
 
@@ -39,7 +39,7 @@ Chrome Extension: Enhanced URL History & Search Query Extraction is a lightweigh
 ## Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/chrome-extension-url-history.git
+git clone [https
 
 ```
 -- go to google chrom e extension settings and select sue local extension
