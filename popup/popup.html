@@ -4,28 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
-
-    <title>Webiis</title>
+    <title>Webiis - Browse History</title>
 </head>
 
 <body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">Webiis</div>
+            <div class="stats">
+                <span class="stats-count" id="visit-count">0</span>
+                <span>visits</span>
+            </div>
+        </div>
+    </div>
 
+    <div class="main-content">
+        <div class="scroll-container" id="scrollbar2">
+            <ul class="horizontal-list"></ul>
+        </div>
 
-<div class="scroll-container" id="scrollbar2">
-    <ul class="horizontal-list"></ul>
-</div>
-
-<!-- Button to clear the history -->
-<button class="btn btn-danger first-click">Clear History</button>
-
-    <!-- <script src="popup.js"></script> -->
+        <div class="clear-section">
+            <button class="first-click">Clear History</button>
+        </div>
+    </div>
 
     <script src="popup.js"></script>
-
 </body>
 
 </html>
