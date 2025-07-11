@@ -39,8 +39,7 @@ Chrome Extension: Enhanced URL History & Search Query Extraction is a lightweigh
 ## Clone the repository:
 
 ```bash
-git clone [https
-
+git clone https://github.com/webermayank/webHisExt.git
 ```
 -- go to google chrom e extension settings and select sue local extension
 
